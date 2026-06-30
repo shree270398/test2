@@ -2,15 +2,15 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-@RestContoller
-public class HelloController{
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello from java backend";
-    }
-    @GetMapping("/home")
-    public String home(){
-        return "java spring-boot application";
-    }
+@RestController
+public class HelloController {
 
+    @GetMapping("/")
+    public String home() {
+        return "Hello from Spring Boot running on Kubernetes!";
+    }
+    @GetMapping("/demo1")
+    public String demo(){
+        return "demo1";
+    }
 }
