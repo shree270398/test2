@@ -45,7 +45,7 @@
                         steps {
                             sh '''
                             kubectl set image deployment/demo demo=$DOCKER_IMAGE:$IMAGE_TAG || \
-                            kubectl crea deployment demo --image=$DOCKER_IMAGE:$IMAGE_TAG
+                            kubectl create deployment demo --image=$DOCKER_IMAGE:$IMAGE_TAG
                             '''
                         }
                     }
